@@ -1,0 +1,201 @@
+
+<html>
+<head>
+		
+		<title> Simplicipe </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!bootstrap >
+		
+		<!links to bootstrap>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+		<link href="css/introHCI.css" rel="stylesheet">
+		<! link to css >
+		<link href="simple.css" rel="stylesheet"/>
+
+
+		<! style>
+		<style> 
+		body {
+			background-color: #FFD700;
+			border: outset;
+			border-color: #000000;
+				}
+
+		</style>
+
+</head>
+
+<body>
+
+<div class ="container">
+	
+	<div >
+		<h1 class="text-center"> Your Recipe Details </h1>
+	</div>
+
+
+
+<form class="form-horizontal">
+    <!name of food>
+    <div class="form-group space">
+    	<label for="foodname" class="col-sm-2 control-label">Name of Food</label>
+    	<div class="col-sm-4">
+      		<input type="text" class="form-control" id="nameoffood" placeholder="Enter name here">
+    	</div>
+   	</div>
+    
+    <! number of ingredients>
+    <div class="form-group space">
+    		<label for="numberofingredients" class="col-sm-2 control-label">Number of Ingredients</label>
+			<div class="col-sm-10">
+			<label class="radio-inline">
+  				<input class="form-control" type="checkbox" id="1-4" value="option1"> 1 - 4
+			</label>
+			<label class="radio-inline">
+				<input class="form-control" type="checkbox" id="5-8" value="option2"> 5 - 8
+			</label>
+			<label class="radio-inline">
+				<input class="form-control" type="checkbox" id="9-12" value="option3"> 9 - 12
+			</label>
+			<label class="radio-inline">
+				<input class="form-control" type="checkbox" id="12+" value="option4"> 12+
+			</label>
+        
+    </div>
+    <!prep time>
+    <div class="form-group morespace">
+		<label for="preptime" class="col-sm-2 control-label">Preparation Time</label>
+    	<div class="col-xs-2">
+      		<input type="number" class="form-control" id="preptime" placeholder="Time in minutes">
+    	</div>
+    </div>
+    <!cooktime>
+    <div class="form-group space">
+		<label for="cooktime" class="col-sm-2 control-label">Cook Time</label>
+    	<div class="col-xs-2">
+      		<input type="number" class="form-control" id="cooktime" placeholder="Time in minutes">
+    	</div>
+    </div>
+    
+    <!diet restrcitions>
+    <div class="form-group space">
+    		<label for="dietrestrictions" class="col-sm-2 control-label">Diet Restrictions</label>
+			<div class="col-sm-10">
+			<label class="checkbox-inline">
+  				<input class="form-control" type="checkbox" id="vegan" value="option1"> Vegan
+			</label>
+			<label class="checkbox-inline">
+				<input class="form-control" type="checkbox" id="Vegetarian" value="option2"> Vegetarian
+			</label>
+			<label class="checkbox-inline">
+				<input class="form-control" type="checkbox" id="nuts" value="option3"> Contains Nuts
+			</label>
+			<label class="checkbox-inline">
+				<input class="form-control" type="checkbox" id="eggs" value="option4"> Contains Eggs
+			</label>
+			</div>
+    </div>
+
+        <!course type>
+    <div class="form-group space">
+    		<label for="coursetype" class="col-sm-2 control-label">Course Type</label>
+			<div class="col-sm-10">
+			<label class="radio-inline">
+  				<input class="form-control" type="checkbox" id="maindish" value="option1"> Main Dish
+			</label>
+			<label class="radio-inline">
+				<input class="form-control" type="checkbox" id="sidedish" value="option2"> Side Dish
+			</label>
+			<label class="radio-inline">
+				<input class="form-control" type="checkbox" id="appetizer" value="option3"> Appetizer
+			</label>
+			<label class="radio-inline">
+				<input class="form-control" type="checkbox" id="dessert" value="option4"> Dessert
+			</label>
+    </div>
+
+
+</form>
+
+
+<div class="form-group">
+    	<label for="foodpic" class="control-label">Picture Upload</label>
+    		<input type="file" id="foodpicture">
+    			<p class="help-block">Feel free to upload a picture of the dish.</p>
+ 	
+</div>
+
+
+
+
+
+<!ingredient add button>
+<form> 
+
+<div class = "morespace form-group">
+  <label for="ingredients" class="col-sm-2 control-label">Ingredients</label>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" id="readytoadd">Add Ingredient</button>
+      </span>
+      <input class="form-control" type="text" placeholder="Enter Ingredient and amount here" id="ingredient">
+    </div>
+  </div>
+ </div>
+
+
+ <div class="form-group">
+ 	<ol id="ingredientlist">
+ 	
+ 	<li> Step One </li>
+
+ 	</ol>
+ </div>
+
+
+ <!directions>
+
+
+<div class = "morespace form-group">
+  <label for="directions" class="col-sm-2 control-label">Directions</label>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Add Step</button>
+      </span>
+      <input class="form-control" type="text" placeholder="Enter step 1 here then click Add Step">
+    </div>
+  </div>
+ </div>
+
+
+
+ 
+<!Submit button>
+
+
+<p class="morespace">
+	<button type="button" class="btn btn-primary btn-lg btn-block">Submit Recipe</button>
+</p>
+
+
+</form>
+
+	
+
+
+
+
+
+</div>
+
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script	src="js/introHCI.js"></script>
+
+</body>
+<html/>
