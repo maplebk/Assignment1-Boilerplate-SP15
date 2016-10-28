@@ -1,3 +1,71 @@
-<h1>Homepage</h1>
-<a href="/createrecipe">Create Recipe</a>
-<a href="/viewrecipe">View Recipe</a>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10">
+      <h1>Homepage</h1>
+      <div class="jumbotron">
+        <ul class="media-list">
+          <li class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="..." alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Food Item 1</h4>
+              ...
+            </div>
+          </li>
+          <li class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" src="..." alt="...">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Food Item 2</h4>
+              ...
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <a class="btn btn-primary btn-lg btn-block" href="/createrecipe">Create Recipe</a>
+      <h3>Filters</h3>
+        <h4>Simplicity (# of ingredients)</h4>
+          <select multiple class="btn-block">
+            <option class="list-group-item">1 - 4</option>
+            <option class="list-group-item">5 - 8</option>
+            <option class="list-group-item">9 - 12</option>
+            <option class="list-group-item">13+</option>
+          </select>
+        <h4>Time (Preperation)</h4>
+          <select multiple class="btn-block">
+            <option class="list-group-item">None</option>
+            <option class="list-group-item">1 - 30 min.</option>
+            <option class="list-group-item">30 min. - 2 hour</option>
+            <option class="list-group-item">2 hour+</option>
+          </select>
+        <h4>Time (Cooking)</h4>
+          <select multiple class="btn-block">
+            <option class="list-group-item">1 - 5 min.</option>
+            <option class="list-group-item">5 - 30 min.</option>
+            <option class="list-group-item">30 min. - 2 hour</option>
+            <option class="list-group-item">2 hour+</option>
+          </select>
+        <h4>Restrictions</h4>
+          <select multiple class="btn-block">
+            <option class="list-group-item">None</option>
+            <option class="list-group-item">Vegan</option>
+            <option class="list-group-item">Vegetarian</option>
+          </select>
+        <h4>Course</h4>
+          <select multiple class="btn-block">
+            <option class="list-group-item">Appetizer</option>
+            <option class="list-group-item">Main Dish</option>
+            <option class="list-group-item">Dessert</option>
+            <option class="list-group-item">Drink</option>
+          </select>
+    </div>
+  </div>
+</div>
