@@ -1,2 +1,17 @@
-<h1>View Recipe</h1>
-<a href="/">Homepage</a>
+<div>
+  <h1>
+    <img class="media-object" src="{{recipe.pic}}" alt="Food" height="120" width="120">
+    {{recipe.name}}
+  <small>{{recipe.ingredientnum}} ingredients | {{recipe.preptime}} min. prep | {{recipe.cooktime}} min cook | {{#each recipe.diet}}{{this}} |{{/each}} {{recipe.course}}</small></h1>
+</div>
+<div>
+  <h2>Ingredients<h2>
+    {{#each recipe.ingredients}}
+    <h3>{{@index}}. <small>{{this}}</small></h3>{{/each}}
+</div>
+<div>
+  <h2>Directions<h2>
+    {{#each recipe.directions}}
+    <h3>{{@index}}. <small>{{this}}</small></h3>{{/each}}
+</div>
+<a class="btn btn-primary btn-lg btn-block" href="/">Back</a>

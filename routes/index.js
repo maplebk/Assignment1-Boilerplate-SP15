@@ -11,7 +11,9 @@ exports.createrecipe = function(req, res){
 	res.render('createrecipe');
 };
 exports.viewrecipe = function(req, res){
-	res.render('viewrecipe');
+	res.render('viewrecipe', {
+	'recipe': data.recipes[parseInt(req.params.recipe)]
+  });
 };
 exports.login = function(req, res){
 	res.render('login');
