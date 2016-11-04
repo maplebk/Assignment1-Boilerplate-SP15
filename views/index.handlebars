@@ -4,12 +4,7 @@
     <header>
       <h2>Filters</h2>
     </header>
-    <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+    <input id="searchbar" type="text" class="form-control" placeholder="Search" onkeyup="searchfilter()">
     <h4>Simplicity (# of ingredients)</h4>
     <select multiple class="btn-block">
       <option class="list-group-item">1 - 4</option>
@@ -60,7 +55,7 @@
     <h1>Homepage</h1>
     <a class="btn btn-primary btn-lg btn-block" href="/createrecipe">Create Recipe</a>
     {{#each recipes}}
-    <a href="/viewrecipe/{{@index}}">
+    <a href="/viewrecipe/{{@index}}" class="recipeitem">
       <div class="panel panel-default">
         <div class="panel-heading">
           <div class="col-sm-3">
@@ -86,4 +81,21 @@
     'padding': 256,
     'tolerance': 70
   });
+  var allitems;
+  $(document).ready(function(){
+    allitems = $('.recipeitem');
+  });
+  function searchfilter() {
+    var val = $.trim($("#searchbar").val()).toUpperCase();
+    console.log();
+    if (val === "")
+        allitems.show();
+    else {
+        allitems.hide();
+        allitems.filter(function() {
+          console.log(2);
+            return -1 != $(this).text().toUpperCase().indexOf(val);
+        }).show();
+    }
+  }
 </script>
