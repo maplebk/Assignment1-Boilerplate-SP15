@@ -32,6 +32,17 @@
       "pic": "http://foodnetwork.sndimg.com/content/dam/images/food/fullset/2008/3/5/0/NY0100_BBQ-Spaghetti.jpg",
       "ingredients": ["spaghetti", "water", "marinara sauce"],
       "directions": ["boil water", "put uncooked spaghetti in water", "leave until soft and fluffy", "let dry", "pour sauce over top"]
+    },
+    {
+      "name" : "Turkey Dinner",
+      "ingredientnum" : 15,
+      "preptime": 30,
+      "cooktime": 120,
+      "diet": ["Contains Nuts"],
+      "course": "Main Dish",
+      "pic": "http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/146/2015/11/24165854/wpid-Thanksgiving-Dinner.png",
+      "ingredients": ["turkey, whole", "cranberries", "squash", "gravy", "corn", "other"],
+      "directions": ["cook turkey", "make other stuff", "put that sexiness on a plate", "eat up yo"]
     }
   ]
 }
