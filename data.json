@@ -1,0 +1,26 @@
+{
+  "recipes": [
+    {
+      "name" : "ffoood",
+      "ingredientnum" : 2,
+      "preptime": 30,
+      "cooktime": 120,
+      "diet": ["Vegan", "Vegetarian", "Contains nuts", "Contains eggs"],
+      "course": "Appetizer",
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/d/de/NCI_cream_cheese_bagel.jpg",
+      "ingredients": ["bagels", "creamecheese"],
+      "directions": ["spread it", "eat it"]
+    },
+    {
+      "name" : "ffoood2",
+      "ingredientnum" : 5,
+      "preptime": 0,
+      "cooktime": 5,
+      "diet": ["Vegetarian", "Contains eggs"],
+      "course": "Main Dish",
+      "pic": "https://upload.wikimedia.org/wikipedia/commons/d/de/NCI_cream_cheese_bagel.jpg",
+      "ingredients": ["bagels", "creamecheese", "bag2els", "creame2cheese", "bag3els"],
+      "directions": ["spread it", "eat it"]
+    }
+  ]
+}

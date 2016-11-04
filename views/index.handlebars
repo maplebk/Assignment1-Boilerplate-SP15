@@ -1,84 +1,79 @@
+
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-10">
-      <h1>Homepage</h1>
-      <div class="jumbotron">
-        <table class="table table-striped">
-          <tr><a class="btn-default btn-block" href="/viewrecipe">
-            <div class="media">
-              <div class="media-left">
-                <img  class="media-object" src="https://upload.wikimedia.org/wikipedia/commons/d/de/NCI_cream_cheese_bagel.jpg" alt="Food" height="64" width="64">
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">Food Item 1</h4>
-                <p>3 ingredients | 2 hour prep | 1 hour cook | vegetarian | main dish</p>
-              </div>
-            </div>
-          </a></tr>
-          <tr><a class="btn-default btn-block" href="/viewrecipe">
-            <div class="media">
-              <div class="media-left">
-                <img  class="media-object" src="http://www.aquahealthlabs.com/wp-content/uploads/2014/03/icon-smoothie.jpg" alt="Food" height="64" width="64">
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">Food Item 2</h4>
-                <p>4 ingredients | 1 hour prep | 4 hour cook | No Restrictions | drink</p>
-              </div>
-            </div>
-          </a></tr>
-          <tr><a class="btn-default btn-block" href="/viewrecipe">
-            <div class="media">
-              <div class="media-left">
-                <img  class="media-object" src="https://s-media-cache-ak0.pinimg.com/736x/9d/7e/ef/9d7eef89694b9047c2781ddcc0aba611.jpg" alt="Food" height="64" width="64">
-              </div>
-              <div class="media-body">
-                <h4 class="media-heading">Food Item 3</h4>
-                <p>5 ingredients | 1 hour prep | 3 hour cook | vegan | dessert</p>
-              </div>
-            </div>
-          </a></tr>
-        </table>
+  <nav class="menu slideout-menu" id="menu">
+    <header>
+      <h2>Filters</h2>
+    </header>
+    <h4>Simplicity (# of ingredients)</h4>
+    <select multiple class="btn-block">
+      <option class="list-group-item">1 - 4</option>
+      <option class="list-group-item">5 - 8</option>
+      <option class="list-group-item">9 - 12</option>
+      <option class="list-group-item">13+</option>
+    </select>
+    <h4>Time (Preperation)</h4>
+    <select multiple class="btn-block">
+      <option class="list-group-item">None</option>
+      <option class="list-group-item">1 - 30 min.</option>
+      <option class="list-group-item">30 min. - 2 hour</option>
+      <option class="list-group-item">2 hour+</option>
+    </select>
+    <h4>Time (Cooking)</h4>
+    <select multiple class="btn-block">
+      <option class="list-group-item">1 - 5 min.</option>
+      <option class="list-group-item">5 - 30 min.</option>
+      <option class="list-group-item">30 min. - 2 hour</option>
+      <option class="list-group-item">2 hour+</option>
+    </select>
+    <h4>Restrictions</h4>
+    <select multiple class="btn-block">
+      <option class="list-group-item">None</option>
+      <option class="list-group-item">Vegan</option>
+      <option class="list-group-item">Vegetarian</option>
+      <option class="list-group-item">Contains Nuts</option>
+      <option class="list-group-item">Contains Eggs</option>
+    </select>
+    <h4>Course</h4>
+    <select multiple class="btn-block">
+      <option class="list-group-item">Appetizer</option>
+      <option class="list-group-item">Main Dish</option>
+      <option class="list-group-item">Dessert</option>
+      <option class="list-group-item">Drink</option>
+    </select>
+  </nav>
+  <main class="panel slideout-panel" id="panel">
+    <header class="panel-header">
+      <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-align-justify"></span>
+      </button>
+    </header>
+    <h1>Homepage</h1>
+    <a class="btn btn-primary btn-lg btn-block" href="/createrecipe">Create Recipe</a>
+    {{#each recipes}}
+    <a href="/viewrecipe">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="col-sm-3">
+            <img class="media-object" src="{{this.pic}}" alt="Food" height="64" width="64">
+          </div>
+          <div class="col-sm-9">
+            <p>{{this.name}}</p>
+          </div>
+        </div>
+        <div class="panel-body">
+          <small>{{this.ingredientnum}} ingredients | {{this.preptime}} min. prep | {{this.cooktime}} min cook | {{#each this.diet}}{{this}} |{{/each}} {{this.course}}</small>
+        </div>
       </div>
-    </div>
-    <div class="col-md-2">
-      <a class="btn btn-primary btn-lg btn-block" href="/createrecipe">Create Recipe</a>
-      <h3>Filters</h3>
-        <h4>Simplicity (# of ingredients)</h4>
-          <select multiple class="btn-block">
-            <option class="list-group-item">1 - 4</option>
-            <option class="list-group-item">5 - 8</option>
-            <option class="list-group-item">9 - 12</option>
-            <option class="list-group-item">13+</option>
-          </select>
-        <h4>Time (Preperation)</h4>
-          <select multiple class="btn-block">
-            <option class="list-group-item">None</option>
-            <option class="list-group-item">1 - 30 min.</option>
-            <option class="list-group-item">30 min. - 2 hour</option>
-            <option class="list-group-item">2 hour+</option>
-          </select>
-        <h4>Time (Cooking)</h4>
-          <select multiple class="btn-block">
-            <option class="list-group-item">1 - 5 min.</option>
-            <option class="list-group-item">5 - 30 min.</option>
-            <option class="list-group-item">30 min. - 2 hour</option>
-            <option class="list-group-item">2 hour+</option>
-          </select>
-        <h4>Restrictions</h4>
-          <select multiple class="btn-block">
-            <option class="list-group-item">None</option>
-            <option class="list-group-item">Vegan</option>
-            <option class="list-group-item">Vegetarian</option>
-            <option class="list-group-item">Contains Nuts</option>
-            <option class="list-group-item">Contains Eggs</option>
-          </select>
-        <h4>Course</h4>
-          <select multiple class="btn-block">
-            <option class="list-group-item">Appetizer</option>
-            <option class="list-group-item">Main Dish</option>
-            <option class="list-group-item">Dessert</option>
-            <option class="list-group-item">Drink</option>
-          </select>
-    </div>
-  </div>
+    </a>
+    {{/each}}
+  </main>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.12/slideout.min.js"></script>
+<script>
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 256,
+    'tolerance': 70
+  });
+</script>
