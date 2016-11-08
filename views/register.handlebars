@@ -11,13 +11,23 @@
 		<input type="text" name="password2"><br><br>
 	</form>
 	<div id="logdiv">
-		<a href="index"><button class="button" type="button" onclick="accountConfirm()">Create</button></a>
+		<a href="{{dest}}"><button class="button" type="button" onclick="accountConfirm()">Create</button></a>
 		<a href="register"><button class="button" type="button">Clear</button></a>
 		<a href="login"><button class="button" type="button">Cancel</button></a>
 	</div>
 	<script>
 		function accountConfirm() {
-			confirm("Finalize this name, email, and password?");
+			var txt;
+			var dest;
+			var a = confirm("Finalize this name, email, and password?");
+			if (a=true) {
+				dest = "account";
+				txt = "Creating account!";
+			}
+			else {
+				dest = "register";
+				txt = "Restarting creation process.";
+			}
 		}
 	</script>
 </div>
