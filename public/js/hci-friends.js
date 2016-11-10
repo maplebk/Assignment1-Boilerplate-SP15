@@ -2,15 +2,15 @@
 
 
 function add_direction() {
-	var direc = $("#direction").val();
-	$("#directionslist").append("<li> direc </li>");
+	var direc = $("#direction1").val();
+	$("#directionslist").append("<li> "+direc+" </li>");
 
 }
 
 
 function add_ingredient() {
 	var ing = $("#ingredient").val();
-	$("#ingredientlist").append("<li> ing </li>" );
+	$("#ingredientlist").append("<li> "+ing+" </li>" );
 
 	}
 
