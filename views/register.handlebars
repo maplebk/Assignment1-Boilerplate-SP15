@@ -20,13 +20,12 @@
 			var txt;
 			var dest;
 			var a = confirm("Finalize this name, email, and password?");
-			if (a=true) {
+			if (a === true) {
 				location.replace("account");
 				txt = "Creating account!";
 			}
 			else {
-				location.replace("register");
-				txt = "Restarting creation process.";
+				txt = "Cancelling creation process.";
 			}
 		}
 	</script>
