@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.css"	rel="stylesheet"/>
-    <link href="css/index.css" rel="stylehseet"/>
+    <link href="css/index.css" rel="stylesheet"/>
      <style>
 
      body {
-     		background-color:#F5F5DC;
+     		background-color:#fefbd8;
      }
 
      </style>
@@ -18,7 +18,7 @@
 <body>
 <div class="container">
 <div class ="container-fluid">
-	<h1 class="text-center"> Your Recipe Details </h1>
+	<h1 class="text-center" id="createrecipetitle"> Your Recipe Details </h1>
 	<form class="form-horizontal">
 		<!name of food>
 		<div class="form-group space">
@@ -99,7 +99,9 @@
 					</label>
 				</div>
 			</form>
-			<div class="form-group">
+			<!picture upload>
+
+			<div class="form-group" id="picture_div">
 				<label for="foodpic" class="control-label">Picture Upload</label>
 				<input type="file" id="foodpicture">
 				<p class="help-block">Feel free to upload a picture of the dish.</p>
