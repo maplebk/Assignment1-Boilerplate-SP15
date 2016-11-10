@@ -6,14 +6,16 @@
     </header>
     <input id="searchbar" type="text" class="form-control" placeholder="Search" onkeyup="searchfilter()">
     <h4>Simplicity (# of ingredients)</h4>
-    <select class="btn-block">
+    <select id="simplicity" class="btn-block" onchange="searchfilter()">
+      <option class="list-group-item">Any</option>
       <option class="list-group-item">1 - 4</option>
       <option class="list-group-item">5 - 8</option>
       <option class="list-group-item">9 - 12</option>
       <option class="list-group-item">13+</option>
     </select>
     <h4>Prep Time</h4>
-    <select class="btn-block">
+    <select id="prep" class="btn-block" onchange="searchfilter()">
+      <option class="list-group-item">Any</option>
       <option class="list-group-item">None</option>
       <option class="list-group-item">1 - 30 min.</option>
       <option class="list-group-item">30 min. - 1 hour</option>
@@ -21,7 +23,8 @@
       <option class="list-group-item">2+ hours</option>
     </select>
     <h4>Cook Time</h4>
-    <select class="btn-block">
+    <select id="cook" class="btn-block" onchange="searchfilter()">
+      <option class="list-group-item">Any</option>
       <option class="list-group-item">1 - 5 min.</option>
       <option class="list-group-item">5 - 30 min.</option>
       <option class="list-group-item">30 min. - 1 hour</option>
@@ -29,15 +32,15 @@
       <option class="list-group-item">2+ hours</option>
     </select>
     <h4>Restrictions</h4>
-    <select multiple class="btn-block">
-      <option class="list-group-item">None</option>
-      <option class="list-group-item">Vegan</option>
-      <option class="list-group-item">Vegetarian</option>
-      <option class="list-group-item">Contains Nuts</option>
-      <option class="list-group-item">Contains Eggs</option>
-    </select>
+    <div>
+      <input id="restvegan" class="btn btn-primary btn-lg" type="checkbox" onchange="searchfilter()">Vegan</input>
+      <input id="restvege" class="btn btn-primary btn-lg" type="checkbox" onchange="searchfilter()">Vegetarian</input>
+      <input id="restnuts" class="btn btn-primary btn-lg" type="checkbox" onchange="searchfilter()">Contains Nuts</input>
+      <input id="resteggs" class="btn btn-primary btn-lg" type="checkbox" onchange="searchfilter()">Contains Eggs</input>
+    </div>
     <h4>Course</h4>
-    <select class="btn-block">
+    <select id="course" class="btn-block" onchange="searchfilter()">
+      <option class="list-group-item">Any</option>
       <option class="list-group-item">Appetizer</option>
       <option class="list-group-item">Main Dish</option>
       <option class="list-group-item">Dessert</option>
@@ -46,18 +49,18 @@
   </nav>
   <main class="panel slideout-panel" id="panel">
     <header class="panel-header">
-      <button type="button" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-align-justify"></span>
+      <button type="button" class="btn btn-default btn-lg js-slideout-toggle">
+        <span class="glyphicon glyphicon-chevron-right"><h4>Filter</h4></span>
       </button>
-      <div align="right">
+      <span align="right">
       <a class="btn btn-primary btn-lg" href="login">Login</a>
       <a class="btn btn-primary btn-lg" href="register">Register</a>
-    </div>
+    </span>
     </header>
     <h1>Homepage</h1>
     <a class="btn btn-primary btn-lg btn-block" href="/createrecipe">Create Recipe</a>
     {{#each recipes}}
-    <a href="/viewrecipe/{{@index}}" class="recipeitem">
+    <a href="/viewrecipe/{{@index}}" class="recipeitem" recipename="{{this.name}}" recipeingredientnum="{{this.ingredientnum}}" recipepreptime="{{this.preptime}}" recipecooktime="{{this.cooktime}}" recipecourse="{{this.course}}" recipediet="{{#each this.diet}}{{this}} {{/each}}">
       <div class="panel panel-default">
         <div class="panel-heading">
           <div class="col-sm-3">
@@ -83,21 +86,103 @@
     'padding': 256,
     'tolerance': 70
   });
+  document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
+        slideout.toggle();
+      });
   var allitems;
   $(document).ready(function(){
     allitems = $('.recipeitem');
   });
   function searchfilter() {
-    var val = $.trim($("#searchbar").val()).toUpperCase();
-    console.log();
-    if (val === "")
-        allitems.show();
-    else {
-        allitems.hide();
-        allitems.filter(function() {
-          console.log(2);
-            return -1 != $(this).text().toUpperCase().indexOf(val);
-        }).show();
+    var searchval = $.trim($("#searchbar").val()).toUpperCase();
+    var simpvallow = 1;
+    var simpvalhigh = 50;
+    switch($.trim($("#simplicity").val())) {
+    case "1 - 4":
+        simpvallow = 1;
+        simpvalhigh = 4;
+        break;
+    case "5 - 8":
+        simpvallow = 5;
+        simpvalhigh = 8;
+        break;
+    case "9 - 12":
+        simpvallow = 9;
+        simpvalhigh = 12;
+        break;
+    case "13+":
+        simpvallow = 13;
+        simpvalhigh = 50;
+        break;
     }
+    var prepvallow = 0;
+    var prepvalhigh = 60000;
+    switch($.trim($("#prep").val())) {
+    case "None":
+        prepvallow = 0;
+        prepvalhigh = 0;
+        break;
+    case "1 - 30 min.":
+        prepvallow = 1;
+        prepvalhigh = 30;
+        break;
+    case "30 min. - 1 hour":
+        prepvallow = 30;
+        prepvalhigh = 60;
+        break;
+    case "1 - 2 hours":
+        prepvallow = 60;
+        prepvalhigh = 120;
+        break;
+    case "2+ hours":
+        prepvallow = 120;
+        prepvalhigh = 60000;
+        break;
+    }
+    var cookvallow = 0;
+    var cookvalhigh = 60000;
+    switch($.trim($("#cook").val())) {
+    case "1 - 5 min.":
+        cookvallow = 1;
+        cookvalhigh = 5;
+        break;
+    case "5 - 30 min.":
+        cookvallow = 5;
+        cookvalhigh = 30;
+        break;
+    case "30 min. - 1 hour":
+        cookvallow = 30;
+        cookvalhigh = 60;
+        break;
+    case "1 - 2 hours":
+        cookvallow = 60;
+        cookvalhigh = 120;
+        break;
+    case "2+ hours":
+        cookvallow = 120;
+        cookvalhigh = 60000;
+        break;
+    }
+    var courseval = $.trim($("#course").val());
+    var restnone = $.trim($("#restnone").val());
+    var restvegan = $.trim($("#restvegan").val());
+    var restvege = $.trim($("#restvege").val());
+    var restnuts = $.trim($("#restnuts").val());
+    var resteggs = $.trim($("#resteggs").val());
+    console.log(restnone);
+    allitems.hide();
+    allitems.filter(function() {
+      console.log($(this).attr("recipediet"));
+      var ingnum = parseInt($(this).attr("recipeingredientnum"));
+      var prept = parseInt($(this).attr("recipepreptime"));
+      var cookt = parseInt($(this).attr("recipecooktime"));
+        return (-1 != $(this).attr("recipename").toUpperCase().indexOf(searchval)) &&
+               (simpvallow <= ingnum && ingnum <= simpvalhigh) &&
+               (prepvallow <= prept && prept <= prepvalhigh) &&
+               (cookvallow <= cookt && cookt <= cookvalhigh) &&
+               (courseval === "Any" || (-1 != $(this).attr("recipecourse").indexOf(courseval)))
+               //(-1 != $(this).attr("recipediet").toUpperCase().indexOf(restval))
+               ;
+    }).show();
   }
 </script>
