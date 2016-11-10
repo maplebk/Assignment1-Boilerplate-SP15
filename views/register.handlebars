@@ -30,13 +30,12 @@
 		function accountConfirm() {
 			var txt;
 			var dest;
-			var a = confirm("Finalize this name, email, and password?");
-			if (a === true) {
-				location.replace("account");
-				txt = "Creating account!";
+			var a = prompt('Continue with this information?');
+			if (a === null) {
+				return;
 			}
 			else {
-				txt = "Cancelling creation process.";
+				location.replace("account");
 			}
 		}
 	</script>
