@@ -31,9 +31,5 @@ body {
   display: block;
 }
 
-#createrecipetitle { color: #618685; font-family: 'Rouge Script', cursive; font-size: 90px; font-weight: normal; line-height: 48px; margin: 10 10 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
+#createrecipetitle { color: #80ced6; font-family: 'Rouge Script', cursive; font-size: 80px; font-weight: normal; line-height: 48px; margin-top: 20px; margin-bottom: 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
 
-#picture_div {text-align: center;}
-
-#foodpicture {text-align: center;
-}
