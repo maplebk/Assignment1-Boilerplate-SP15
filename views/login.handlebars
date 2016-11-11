@@ -1,33 +1,19 @@
-<html>
-<head>
-	<title>My HCI Friends</title>	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="login/login.css" rel="stylesheet" />
-     
-</head>
-<style>
-body {
-	text-align: center;
-}
-</style>
-
-<body >
-
-<a href="/">Homepage</a>
+{{#if error}}
+  <div class="alert alert-danger" role="alert">No Such Account!</div>
+{{/if}}
 <div class="container">
 <div id="login">
 	<h1>Welcome to Simplicipe</h1>
 	<form id="form">
-		Email: <br>
-		<input type="text" name="email"><br><br>
+		Username: <br>
+		<input type="text" name="Username" id="user" onkeyup="verify()"><br><br>
 		Password: <br>
-		<input type="text" name="password"><br>
-		<input type="checkbox" name="remember">Keep me signed in
+		<input type="text" name="Password" id="pass" onkeyup="verify()"><br>
 	</form>
 	<br>
 	<div id="logdiv">
-		<a href="/"><button class="button" type="button">Login</button></a>
+		<a class="changeurl" href="/verify"><button class="btn btn-default" type="button">Login</button></a>
+		<a href="/"><button class="btn btn-default" type="button">Cancel</button></a>
 	</div>
 	<br>
 	<p style="font-size:18px;">
@@ -38,12 +24,22 @@ body {
 	</p>
 </div>
 </div>
+<script>
+  function verify() {
+		var usern = $("#user").val();
+		var passw = $("#pass").val();
+		if (usern === "" || passw === "")
+		{
+			$('.changeurl').attr("href", "/login");
+		}
+		else {
+			$('.changeurl').attr("href", "/verify/" + usern + "/" + passw);
+		}
+  }
+</script>
 
-<script src="public/js/jquery-1.11.0.js"></script>
-<script src="public/js/bootstrap.js"</script>
-<script src="public/js/hci-friends.js"</script>
-
-
-</body>
-
-</html>
+<style>
+body {
+	text-align: center;
+}
+</style>
