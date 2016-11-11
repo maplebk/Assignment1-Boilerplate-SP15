@@ -11,7 +11,17 @@ exports.view = function(req, res){
   });
 };
 exports.account = function(req, res){
-	res.render('account');
+	var account = null;
+	for (x in data.accounts)
+	{
+		if (data.accounts[x].username === req.params.user)
+		{
+			account = data.accounts[x];
+		}
+	}
+	res.render('account', {
+	'account': account
+  });
 };
 exports.createrecipe = function(req, res){
 	res.render('createrecipe');
