@@ -49,7 +49,7 @@ function add_recipe(res) {
 
 $("#submit_button").click(function(e)	{
 		$.get("../data.json", add_recipe);
-	    )}
+	    )};
 
 $("#readytoadd").click(add_ingredient);
 $("#add_step").click(add_direction);
