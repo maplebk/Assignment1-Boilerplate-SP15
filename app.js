@@ -44,6 +44,7 @@ app.get('/login/:error', index.login);
 app.get('/register', index.register);
 app.get('/forgot', index.forgot);
 app.get('/verify/:user/:pass', index.verify);
+app.get('/logout', index.logout);
 // Example route
 // app.get('/users', user.list);
 

@@ -1,8 +1,13 @@
 var data = require("../data.json");
+var globaluser = "";
 exports.view = function(req, res){
+	if (globaluser === "")
+	{
+		globaluser = req.params.user;
+	}
 	res.render('index', {
 	'recipes': data.recipes,
-	'name': req.params.user
+	'name': globaluser
   });
 };
 exports.account = function(req, res){
@@ -44,4 +49,9 @@ exports.verify = function(req, res){
 	else {
 		res.redirect("/index/" + name);
 	}
+};
+
+exports.verify = function(req, res){
+	globaluser = "";
+	res.redirect('/');
 };

@@ -55,7 +55,7 @@
       <span align="right">
       {{#if name}}
         <a class="btn btn-primary btn-lg" href="../account">Hi, {{name}}</a>
-        <a class="btn btn-primary btn-lg" href="../">Logout</a>
+        <a class="btn btn-primary btn-lg" href="../logout">Logout</a>
       {{else}}
         <a class="btn btn-primary btn-lg" href="../login/attempt">Login</a>
         <a class="btn btn-primary btn-lg" href="../register">Register</a>
@@ -189,4 +189,6 @@
                (resteggs || (-1 == $(this).attr("recipediet").indexOf("Contains eggs")));
     }).show();
   }
+
+
 </script>
