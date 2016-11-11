@@ -20,7 +20,7 @@
 		Don't have an account? Register with us <span><a href="register" style="color:orange;">here</a></span>!
 	</p>
 	<p style="font-size:18px;">
-		<a href="forgot">I forgot my password!</a>
+		<a href="/forgot">I forgot my password!</a>
 	</p>
 </div>
 </div>
@@ -30,7 +30,7 @@
 		var passw = $("#pass").val();
 		if (usern === "" || passw === "")
 		{
-			$('.changeurl').attr("href", "/login");
+			$('.changeurl').attr("href", "");
 		}
 		else {
 			$('.changeurl').attr("href", "/verify/" + usern + "/" + passw);
