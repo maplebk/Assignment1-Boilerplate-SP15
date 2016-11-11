@@ -1,7 +1,7 @@
 var data = require("../data.json");
 var globaluser = "";
 exports.view = function(req, res){
-	if (globaluser === "")
+	if (req.params.user !== undefined)
 	{
 		globaluser = req.params.user;
 	}
