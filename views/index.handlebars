@@ -6,7 +6,7 @@
     </header>
     <input id="searchbar" type="text" class="form-control" placeholder="Search" onkeyup="searchfilter()">
     <h4>Simplicity (# of ingredients)</h4>
-    <select id="simplicity" class="btn-block" onchange="searchfilter()">
+    <select id="simplicity" class="btn btn-default btn-block" onchange="searchfilter()">
       <option class="list-group-item">Any</option>
       <option class="list-group-item">1 - 4</option>
       <option class="list-group-item">5 - 8</option>
@@ -14,7 +14,7 @@
       <option class="list-group-item">13+</option>
     </select>
     <h4>Prep Time</h4>
-    <select id="prep" class="btn-block" onchange="searchfilter()">
+    <select id="prep" class="btn btn-default btn-block" onchange="searchfilter()">
       <option class="list-group-item">Any</option>
       <option class="list-group-item">None</option>
       <option class="list-group-item">1 - 30 min.</option>
@@ -23,7 +23,7 @@
       <option class="list-group-item">2+ hours</option>
     </select>
     <h4>Cook Time</h4>
-    <select id="cook" class="btn-block" onchange="searchfilter()">
+    <select id="cook" class="btn btn-default btn-block" onchange="searchfilter()">
       <option class="list-group-item">Any</option>
       <option class="list-group-item">1 - 5 min.</option>
       <option class="list-group-item">5 - 30 min.</option>
@@ -32,14 +32,14 @@
       <option class="list-group-item">2+ hours</option>
     </select>
     <h4>Restrictions</h4>
-    <div>
-      <input id="restvegan" class="btn btn-primary btn-lg" type="checkbox" onchange="searchfilter()">Vegan</input>
-      <input id="restvege" class="btn btn-primary btn-lg" type="checkbox" onchange="searchfilter()">Vegetarian</input>
-      <input id="restnuts" class="btn btn-primary btn-lg" type="checkbox" onchange="searchfilter()">Contains Nuts</input>
-      <input id="resteggs" class="btn btn-primary btn-lg" type="checkbox" onchange="searchfilter()">Contains Eggs</input>
+    <div align="left" class="btn-group-vertical btn-block">
+      <label class="btn btn-default"><input id="restvegan" type="checkbox" onchange="searchfilter()">Vegan</label>
+      <label class="btn btn-default"><input id="restvege" type="checkbox" onchange="searchfilter()">Vegetarian</label>
+      <label class="btn btn-default"><input id="restnuts" type="checkbox" onchange="searchfilter()">Does not contain Nuts</label>
+      <label class="btn btn-default"><input id="resteggs" type="checkbox" onchange="searchfilter()">Does not contain Eggs</label>
     </div>
     <h4>Course</h4>
-    <select id="course" class="btn-block" onchange="searchfilter()">
+    <select id="course" class="btn btn-default btn-block" onchange="searchfilter()">
       <option class="list-group-item">Any</option>
       <option class="list-group-item">Appetizer</option>
       <option class="list-group-item">Main Dish</option>
@@ -164,15 +164,12 @@
         break;
     }
     var courseval = $.trim($("#course").val());
-    var restnone = $.trim($("#restnone").val());
-    var restvegan = $.trim($("#restvegan").val());
-    var restvege = $.trim($("#restvege").val());
-    var restnuts = $.trim($("#restnuts").val());
-    var resteggs = $.trim($("#resteggs").val());
-    console.log(restnone);
+    var restvegan = $.trim($("#restvegan").is(':checked')) === "false";
+    var restvege = $.trim($("#restvege").is(':checked')) === "false";
+    var restnuts = $.trim($("#restnuts").is(':checked')) === "false";
+    var resteggs = $.trim($("#resteggs").is(':checked')) === "false";
     allitems.hide();
     allitems.filter(function() {
-      console.log($(this).attr("recipediet"));
       var ingnum = parseInt($(this).attr("recipeingredientnum"));
       var prept = parseInt($(this).attr("recipepreptime"));
       var cookt = parseInt($(this).attr("recipecooktime"));
@@ -180,9 +177,11 @@
                (simpvallow <= ingnum && ingnum <= simpvalhigh) &&
                (prepvallow <= prept && prept <= prepvalhigh) &&
                (cookvallow <= cookt && cookt <= cookvalhigh) &&
-               (courseval === "Any" || (-1 != $(this).attr("recipecourse").indexOf(courseval)))
-               //(-1 != $(this).attr("recipediet").toUpperCase().indexOf(restval))
-               ;
+               (courseval === "Any" || (-1 != $(this).attr("recipecourse").indexOf(courseval))) &&
+               (restvege || (-1 != $(this).attr("recipediet").indexOf("Vegetarian"))) &&
+               (restvegan || (-1 != $(this).attr("recipediet").indexOf("Vegan"))) &&
+               (restnuts || (-1 == $(this).attr("recipediet").indexOf("Contains Nuts"))) &&
+               (resteggs || (-1 == $(this).attr("recipediet").indexOf("Contains eggs")));
     }).show();
   }
 </script>
