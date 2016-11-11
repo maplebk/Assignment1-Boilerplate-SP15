@@ -39,7 +39,7 @@ function add_recipe() {
 							direction_list.push($(elem).text());
 							});
 	$.getJSON( "data.json", function( data ) {
-				var new_recipe = {name: ingredient_name, ingredientnum: num_of_ingredients, preptime: prep_time, cooktime: cook_time, diet: diet_array, course: course_type, ingredients: ingredient_list, directions: direction_list, pic: "https://upload.wikimedia.org/wikipedia/commons/4/49/Gulasch.jpg" };
+				var new_recipe = {"name": ingredient_name, "ingredientnum": num_of_ingredients, "preptime": prep_time, "cooktime": cook_time, "diet": diet_array, "course": course_type, "ingredients": ingredient_list, "directions": direction_list, "pic": "https://upload.wikimedia.org/wikipedia/commons/4/49/Gulasch.jpg" };
 				data.push(new_recipe);
 				});
 }
@@ -48,5 +48,5 @@ function add_recipe() {
 
 $("#readytoadd").click(add_ingredient);
 $("#add_step").click(add_direction);
-$("#submit_button").submit(add_recipe);
+$("#submit_button").click(add_recipe);
 
