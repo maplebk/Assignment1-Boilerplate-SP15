@@ -27,7 +27,7 @@ function add_recipe() {
 	$("#checkboxlist input:checked").each(function() {
 						diet_array.push($(this).val());
 						});
-	var prep_time = $("$preptime").val();
+	var prep_time = $("#preptime").val();
 	var cook_time = $("#cooktime").val();
 	var course_type = $('input[name="type_dish"]:checked', '#dishes').val();
 	var ingredient_list = []
@@ -40,7 +40,7 @@ function add_recipe() {
 							});
 	$.getJSON( "data.json", function( data ) {
 				var new_recipe = {"name": ingredient_name, "ingredientnum": num_of_ingredients, "preptime": prep_time, "cooktime": cook_time, "diet": diet_array, "course": course_type, "ingredients": ingredient_list, "directions": direction_list, "pic": "https://upload.wikimedia.org/wikipedia/commons/4/49/Gulasch.jpg" };
-				data.push(new_recipe);
+				data.recipes.push(new_recipe);
 				});
 }
 
