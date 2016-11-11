@@ -53,14 +53,19 @@
         <span class="glyphicon glyphicon-chevron-right"><h4>Filter</h4></span>
       </button>
       <span align="right">
-      <a class="btn btn-primary btn-lg" href="login">Login</a>
-      <a class="btn btn-primary btn-lg" href="register">Register</a>
+      {{#if name}}
+        <a class="btn btn-primary btn-lg" href="../account">Hi, {{name}}</a>
+        <a class="btn btn-primary btn-lg" href="../">Logout</a>
+      {{else}}
+        <a class="btn btn-primary btn-lg" href="../login/attempt">Login</a>
+        <a class="btn btn-primary btn-lg" href="../register">Register</a>
+      {{/if}}
     </span>
     </header>
     <h1>Homepage</h1>
-    <a class="btn btn-primary btn-lg btn-block" href="/createrecipe">Create Recipe</a>
+    <a class="btn btn-primary btn-lg btn-block" href="../createrecipe">Create Recipe</a>
     {{#each recipes}}
-    <a href="/viewrecipe/{{@index}}" class="recipeitem" recipename="{{this.name}}" recipeingredientnum="{{this.ingredientnum}}" recipepreptime="{{this.preptime}}" recipecooktime="{{this.cooktime}}" recipecourse="{{this.course}}" recipediet="{{#each this.diet}}{{this}} {{/each}}">
+    <a href="../viewrecipe/{{@index}}" class="recipeitem" recipename="{{this.name}}" recipeingredientnum="{{this.ingredientnum}}" recipepreptime="{{this.preptime}}" recipecooktime="{{this.cooktime}}" recipecourse="{{this.course}}" recipediet="{{#each this.diet}}{{this}} {{/each}}">
       <div class="panel panel-default">
         <div class="panel-heading">
           <div class="col-sm-3">

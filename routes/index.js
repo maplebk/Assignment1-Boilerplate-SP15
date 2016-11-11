@@ -1,7 +1,8 @@
 var data = require("../data.json");
 exports.view = function(req, res){
 	res.render('index', {
-	'recipes': data.recipes
+	'recipes': data.recipes,
+	'name': req.params.user
   });
 };
 exports.account = function(req, res){
@@ -16,11 +17,31 @@ exports.viewrecipe = function(req, res){
   });
 };
 exports.login = function(req, res){
-	res.render('login');
+	var attempt = (req.params.error === "attempt");
+	res.render('login', {
+		'error': (req.params.error === "attempt" ? "" : "error")
+	});
 };
 exports.register = function(req, res){
 	res.render('register');
 };
 exports.forgot = function(req, res){
 	res.render('forgot');
+};
+exports.verify = function(req, res){
+	var name = "";
+	for (x in data.accounts) {
+		var account = data.accounts[x];
+    if (account.username === req.params.user && account.password === req.params.pass)
+		{
+			name = account.username;
+		}
+	}
+	if (name === "")
+	{
+		res.redirect('/login/error');
+	}
+	else {
+		res.redirect("/index/" + name);
+	}
 };
