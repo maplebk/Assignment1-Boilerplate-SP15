@@ -20,7 +20,6 @@ function add_ingredient() {
 	
 	}
 function add_recipe() {
-	console.log("add_recipe acted on")
 	var ingredient_name = $("#nameoffood").val();
 	
 	var num_of_ingredients = $('input[name="my_ingredients"]:checked', '#yum').val();
@@ -49,5 +48,5 @@ function add_recipe() {
 
 $("#readytoadd").click(add_ingredient);
 $("#add_step").click(add_direction);
-$("#submit_button").click(add_recipe);
+$("#submit_button").submit(add_recipe);
 
