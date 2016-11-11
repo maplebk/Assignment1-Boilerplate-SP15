@@ -51,7 +51,7 @@ exports.verify = function(req, res){
 	}
 };
 
-exports.verify = function(req, res){
+exports.logout = function(req, res){
 	globaluser = "";
 	res.redirect('/');
 };
