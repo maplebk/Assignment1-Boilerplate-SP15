@@ -4,7 +4,7 @@
 function add_direction() {
 	var direc = $("#direction1").val();
 	$("#directionslist").append("<li> "+direc+" </li>");
-	$(this).html("Add another");
+	$(this).html("Add next step");
 	$("#direction1").val("");
 	
 
@@ -15,7 +15,7 @@ function add_direction() {
 function add_ingredient() {
 	var ing = $("#ingredient").val();
 	$("#ingredientlist").append("<li> "+ing+" </li>" );
-	$(this).html("Add next step");
+	$(this).html("Add another");
 	$("#ingredient").val("");
 	
 
