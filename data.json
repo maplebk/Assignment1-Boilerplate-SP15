@@ -2,6 +2,8 @@
   "recipes": [
     {
       "name" : "Bagel with Cream Cheese",
+      "user" : "bageldude",
+      "votes" : "243",
       "ingredientnum" : 2,
       "preptime": 5,
       "cooktime": 10,
@@ -13,6 +15,8 @@
     },
     {
       "name" : "Eggs Benedict",
+      "user" : "chef_kickass",
+      "votes" : "179",
       "ingredientnum" : 8,
       "preptime": 60,
       "cooktime": 30,
@@ -24,6 +28,8 @@
     },
     {
       "name" : "Spaghetti with Marinara",
+      "user" : "bob_burger",
+      "votes" : "34",
       "ingredientnum" : 3,
       "preptime": 5,
       "cooktime": 15,
@@ -35,6 +41,8 @@
     },
     {
       "name" : "Turkey Dinner",
+      "user" : "moody_max",
+      "votes" : "18",
       "ingredientnum" : 15,
       "preptime": 30,
       "cooktime": 120,
@@ -44,5 +52,19 @@
       "ingredients": ["turkey, whole", "cranberries", "squash", "gravy", "corn", "other"],
       "directions": ["cook turkey", "make other stuff", "put that sexiness on a plate", "eat up yo"]
     }
-  ]
+  ],
+ "accounts": [
+    {
+	"username" : "bageldude",
+	"email" : "bdude@gmail.com",
+	"password" : "creamcheese",
+	"picture" : "http://loving-newyork.com/wp-content/uploads/2015/09/bagel-new-york-city-03.jpg"
+    },
+    {
+	"username" : "its_a_mario",
+	"email" : "mdog@aol.com",
+	"password" : "bowsersucks",
+	"picture" : "https://upload.wikimedia.org/wikipedia/en/9/93/Tanooki_Mario.jpg"
+    }
+ ]
 }
