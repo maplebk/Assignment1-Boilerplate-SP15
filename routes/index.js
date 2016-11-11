@@ -21,6 +21,6 @@ exports.login = function(req, res){
 exports.register = function(req, res){
 	res.render('register');
 };
-exports.forgot - function(req, res){
+exports.forgot = function(req, res){
 	res.render('forgot');
 };
