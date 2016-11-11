@@ -27,25 +27,31 @@
 				<input type="text" class="form-control" id="nameoffood" placeholder="Enter name here">
 			</div>
 		</div>
+	</form>
 
+	<form class="horizontal" id="yum">	
 		<! number of ingredients>
 		<div class="form-group space">
 			<label for="numberofingredients" class="col-sm-2 control-label">Number of Ingredients</label>
 			<div class="col-sm-10">
-				<label class="radio-inline">
-					<input class="form-control" type="checkbox" id="1-4" value="option1"> 1 - 4
+				<label class="radio-inline" >
+					<input class="form-control" type="checkbox" id="1-4" value="option1" name="my_ingredients"> 1 - 4
 				</label>
-				<label class="radio-inline">
-					<input class="form-control" type="checkbox" id="5-8" value="option2"> 5 - 8
+				<label class="radio-inline" >
+					<input class="form-control" type="checkbox" id="5-8" value="option2" name="my_ingredients"> 5 - 8
 				</label>
-				<label class="radio-inline">
-					<input class="form-control" type="checkbox" id="9-12" value="option3"> 9 - 12
+				<label class="radio-inline" >
+					<input class="form-control" type="checkbox" id="9-12" value="option3" name="my_ingredients"> 9 - 12
 				</label>
-				<label class="radio-inline">
-					<input class="form-control" type="checkbox" id="12+" value="option4"> 12+
+				<label class="radio-inline" >
+					<input class="form-control" type="checkbox" id="12+" value="option4" name="my_ingredients"> 12+
 				</label>
 
 			</div>
+		</div>
+	</form>
+
+	<form class="horizontal" id="prep">
 			<!prep time>
 			<div class="form-group morespace">
 				<label for="preptime" class="col-sm-2 control-label">Preparation Time</label>
@@ -53,6 +59,9 @@
 					<input type="number" class="form-control" id="preptime" placeholder="Time in minutes">
 				</div>
 			</div>
+	</form>
+			
+	<form class="horizontal">
 			<!cooktime>
 			<div class="form-group space">
 				<label for="cooktime" class="col-sm-2 control-label">Cook Time</label>
@@ -60,45 +69,49 @@
 					<input type="number" class="form-control" id="cooktime" placeholder="Time in minutes">
 				</div>
 			</div>
+	</form>
 
+	<form class="horizontal" id="restrict">
 			<!diet restrcitions>
 			<div class="form-group space">
 				<label for="dietrestrictions" class="col-sm-2 control-label">Diet Restrictions</label>
 				<div class="col-sm-10">
 					<label class="checkbox-inline">
-						<input class="form-control" type="checkbox" id="vegan" value="option1"> Vegan
+						<input class="form-control" type="checkbox" id="vegan" value="option1" name="my_restrict"> Vegan
 					</label>
 					<label class="checkbox-inline">
-						<input class="form-control" type="checkbox" id="Vegetarian" value="option2"> Vegetarian
+						<input class="form-control" type="checkbox" id="Vegetarian" value="option2" name="my_restrict"> Vegetarian
 					</label>
 					<label class="checkbox-inline">
-						<input class="form-control" type="checkbox" id="nuts" value="option3"> Contains Nuts
+						<input class="form-control" type="checkbox" id="nuts" value="option3" name="my_restrict"> Contains Nuts
 					</label>
 					<label class="checkbox-inline">
-						<input class="form-control" type="checkbox" id="eggs" value="option4"> Contains Eggs
+						<input class="form-control" type="checkbox" id="eggs" value="option4" name="my_restrict"> Contains Eggs
 					</label>
 				</div>
 			</div>
+	</form>
 
 
+	<form class="horizontal" id="dishes">
 			<!course type>
 			<div class="form-group space">
 				<label for="coursetype" class="col-sm-2 control-label">Course Type</label>
 				<div class="col-sm-10">
 					<label class="radio-inline">
-						<input class="form-control" type="checkbox" id="maindish" value="option1"> Main Dish
+						<input class="form-control" type="checkbox" id="maindish" value="option1" name="type_dish"> Main Dish
 					</label>
 					<label class="radio-inline">
-						<input class="form-control" type="checkbox" id="sidedish" value="option2"> Side Dish
+						<input class="form-control" type="checkbox" id="sidedish" value="option2" name="type_dish"> Side Dish
 					</label>
 					<label class="radio-inline">
-						<input class="form-control" type="checkbox" id="appetizer" value="option3"> Appetizer
+						<input class="form-control" type="checkbox" id="appetizer" value="option3" name="type_dish"> Appetizer
 					</label>
 					<label class="radio-inline">
-						<input class="form-control" type="checkbox" id="dessert" value="option4"> Dessert
+						<input class="form-control" type="checkbox" id="dessert" value="option4" name="type_dish"> Dessert
 					</label>
 				</div>
-			</form>
+	</form>
 			<!picture upload>
 
 			<div class="form-group container" id="picture_div">
@@ -106,6 +119,7 @@
 				<input type="file" id="foodpicture">
 				<p class="help-block">Feel free to upload a picture of your dish.</p>
 			</div>
+			
 			<!ingredient add button>
 			<form>
 				<div class = "morespace form-group">
