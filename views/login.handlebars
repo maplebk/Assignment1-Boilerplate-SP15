@@ -30,10 +30,10 @@
 		var passw = $("#pass").val();
 		if (usern === "" || passw === "")
 		{
-			$('.changeurl').attr("href", "");
+			$('.changeurl').attr("href", "../login/attempt");
 		}
 		else {
-			$('.changeurl').attr("href", "/verify/" + usern + "/" + passw);
+			$('.changeurl').attr("href", "../verify/" + usern + "/" + passw);
 		}
   }
 </script>
