@@ -41,6 +41,7 @@ app.get('/createrecipe', index.createrecipe);
 app.get('/viewrecipe/:recipe', index.viewrecipe);
 app.get('/login', index.login);
 app.get('/register', index.register);
+app.get('/forgot', index.forgot);
 // Example route
 // app.get('/users', user.list);
 
