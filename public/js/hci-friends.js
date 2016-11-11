@@ -20,7 +20,9 @@ function add_ingredient() {
 	
 	}
 function add_recipe() {
+	console.log("add_recipe acted on")
 	var ingredient_name = $("#nameoffood").val();
+	
 	var num_of_ingredients = $('input[name="my_ingredients"]:checked', '#yum').val();
 	var diet_array = [];
 	$("#checkboxlist input:checked").each(function() {
