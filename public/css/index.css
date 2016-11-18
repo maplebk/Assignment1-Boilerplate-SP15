@@ -31,7 +31,7 @@ body {
   display: block;
 }
 
-#createrecipetitle { color: #80ced6; font-family: 'Rouge Script', cursive; font-size: 80px; font-weight: normal; line-height: 48px; margin-top: 20px; margin-bottom: 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
+#createrecipetitle { color: #618685; font-family: 'Rouge Script', cursive; font-size: 70px; font-weight: normal; line-height: 48px; margin-top: 30px; margin-bottom: 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
 h1, h2, h3, h4, h5, h6 { color:#618685 ; }
 
 label { font-family: "Comic Sans MS", cursive, sans-serif}
