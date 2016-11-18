@@ -36,6 +36,15 @@ h1, h2, h3, h4, h5, h6 { color:#80ced6 ; }
 
 label { font-family: "Comic Sans MS", cursive, sans-serif}
 
+#change_recipe {
+                background: none;
+                padding: 12px 22px;
+                border: 2px solid #FF0000;
+                
+                
+
+}
+
 
 
   
