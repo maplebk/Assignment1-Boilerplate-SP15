@@ -49,7 +49,7 @@
   </nav>
   <main class="panel slideout-panel" id="panel">
     <header class="panel-header">
-      <button type="button" class="btn btn-default btn-lg js-slideout-toggle">
+       <button id="togglebutton" type="button" class="btn btn-default btn-lg js-slideout-toggle”>
         <span class="glyphicon glyphicon-chevron-right"><h4>Filter</h4></span>
       </button>
       <span align="right">
@@ -98,7 +98,21 @@
   });
   document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
         slideout.toggle();
+        
+         if (slideout.isOpen())
+        {
+           $("#togglebutton").attr("class", "btn btn-danger btn-lg js-slideout-toggle");
+           $("#togglebutton").html("<span class='glyphicon glyphicon-chevron-left'><h4 style='color:white'>Close</h4></span>");
+        }
+         else
+         {
+           $("#togglebutton").attr("class", "btn btn-default btn-lg js-slideout-toggle");
+           $("#togglebutton").html("<span class='glyphicon glyphicon-chevron-right'><h4>Filter</h4></span>");
+        }      
+      
       });
+      
+      
   var allitems;
   $(document).ready(function(){
     allitems = $('.recipeitem');
