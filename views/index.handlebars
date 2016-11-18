@@ -49,24 +49,24 @@
   </nav>
   <main class="panel slideout-panel" id="panel">
     <header class="panel-header">
-      <button id="togglebutton" type="button" class="btn btn-default btn-lg js-slideout-toggle">
+      <button type="button" class="btn btn-default btn-lg js-slideout-toggle">
         <span class="glyphicon glyphicon-chevron-right"><h4>Filter</h4></span>
       </button>
       <span align="right">
       {{#if name}}
-        <a class="btn btn-primary btn-lg" href="../account/{{name}}">Account</a>
-        <a class="btn btn-primary btn-lg" href="../logout">Logout</a>
+        <a class="btn btn-primary btn-lg" href="../account/{{name}}" id="g">Hi, {{name}}</a>
+        <a class="btn btn-primary btn-lg" href="../logout" id="h">Logout</a>
       {{else}}
-        <a class="btn btn-primary btn-lg" href="../login/attempt">Login</a>
-        <a class="btn btn-primary btn-lg" href="../register">Register</a>
+        <a class="btn btn-primary btn-lg" href="../login/attempt" id="j">Login</a>
+        <a class="btn btn-primary btn-lg" href="../register" id="k">Register</a>
       {{/if}}
     </span>
     </header>
     <h1>Homepage</h1>
     {{#if newchange}}
-      <a class="btn btn-outline-primary btn-lg btn-block active" href="../createrecipe" id="change_recipe">Post Your Recipe</a>
-    {{else}}
       <a class="btn btn-primary btn-lg btn-block" href="../createrecipe">Create Recipe</a>
+    {{else}}
+      <a class="btn btn-primary btn-lg btn-block active" href="../createrecipe" id="change_recipe">Post Your Recipe</a>
     {{/if}}
 
     {{#each recipes}}
@@ -98,16 +98,6 @@
   });
   document.querySelector('.js-slideout-toggle').addEventListener('click', function() {
         slideout.toggle();
-        if (slideout.isOpen())
-        {
-          $("#togglebutton").attr("class", "btn btn-danger btn-lg js-slideout-toggle");
-          $("#togglebutton").html("<span class='glyphicon glyphicon-chevron-left'><h4 style='color:white'>Close</h4></span>");
-        }
-        else
-        {
-          $("#togglebutton").attr("class", "btn btn-default btn-lg js-slideout-toggle");
-          $("#togglebutton").html("<span class='glyphicon glyphicon-chevron-right'><h4>Filter</h4></span>");
-        }
       });
   var allitems;
   $(document).ready(function(){
