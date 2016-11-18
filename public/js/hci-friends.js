@@ -27,6 +27,13 @@ function delete_ingredient() {
 
 	}
 
+function delete_steps() {
+	var length_of_directions = $("#directionslist li").length;
+	var index = length_of_directions - 1;
+	$("#directionslist li").eq(index).remove();
+
+}
+
 function add_recipe(res) {
 	var ingredient_name = $("#nameoffood").val();
 	
@@ -61,5 +68,6 @@ $("#submit_button").click(function(e)	{
 $("#readytoadd").click(add_ingredient);
 $("#add_step").click(add_direction);
 $("#delete_ingred").click(delete_ingredient);
+$("#delete_step").click(delete_steps);
 
 
