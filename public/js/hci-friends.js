@@ -21,7 +21,7 @@ function add_ingredient() {
 	}
 
 function delete_ingredient() {
-	var length_of_list = $("#ingredientlist").len();
+	var length_of_list = $("#ingredientlist").length;
 	var index = (length_of_list - 1);
 	$("#ingredientlist li").eq(index).remove();
 
@@ -60,5 +60,6 @@ $("#submit_button").click(function(e)	{
 
 $("#readytoadd").click(add_ingredient);
 $("#add_step").click(add_direction);
+$("#delete_ingred").click(delete_ingredient);
 
 
