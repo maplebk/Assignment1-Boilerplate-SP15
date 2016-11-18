@@ -7,7 +7,19 @@ exports.view = function(req, res){
 	}
 	res.render('index', {
 	'recipes': data.recipes,
-	'name': globaluser
+	'name': globaluser,
+	'newchange': false
+  });
+};
+exports.newview = function(req, res){
+	if (req.params.user !== undefined)
+	{
+		globaluser = req.params.user;
+	}
+	res.render('index', {
+	'recipes': data.recipes,
+	'name': globaluser,
+	'newchange': true
   });
 };
 exports.account = function(req, res){
