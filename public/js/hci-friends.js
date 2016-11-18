@@ -21,7 +21,7 @@ function add_ingredient() {
 	}
 
 function delete_ingredient() {
-	var length_of_list = $("#ingredientlist").length;
+	var length_of_list = $("#ingredientlist li").length;
 	var index = (length_of_list - 1);
 	$("#ingredientlist li").eq(index).remove();
 
