@@ -8,7 +8,7 @@ exports.view = function(req, res){
 	res.render('index', {
 	'recipes': data.recipes,
 	'name': globaluser,
-	'newchange': false
+	'newchange': null
   });
 };
 exports.newview = function(req, res){

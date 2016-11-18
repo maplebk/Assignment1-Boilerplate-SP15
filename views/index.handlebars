@@ -64,9 +64,9 @@
     </header>
     <h1>Homepage</h1>
     {{#if newchange}}
-      <a class="btn btn-primary btn-lg btn-block" href="../createrecipe">Create Recipe</a>
-    {{else}}
       <a class="btn btn-outline-primary btn-lg btn-block active" href="../createrecipe" id="change_recipe">Post Your Recipe</a>
+    {{else}}
+      <a class="btn btn-primary btn-lg btn-block" href="../createrecipe">Create Recipe</a>
     {{/if}}
 
     {{#each recipes}}
