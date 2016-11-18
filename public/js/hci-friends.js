@@ -20,6 +20,13 @@ function add_ingredient() {
 	
 	}
 
+function delete_ingredient() {
+	var length_of_list = $("#ingredientlist").len();
+	var index = (length_of_list - 1);
+	$("#ingredientlist li").eq(index).remove();
+
+	}
+
 function add_recipe(res) {
 	var ingredient_name = $("#nameoffood").val();
 	
