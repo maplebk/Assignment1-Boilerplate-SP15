@@ -36,11 +36,11 @@ h1, h2, h3, h4, h5, h6 { color:#618685 ; }
 
 label { font-family: "Comic Sans MS", cursive, sans-serif}
 
-#change_recipe {
+.change_recipe {
                 background: #fdf7ef;
                 padding: 12px 22px;
                 border: 3px solid #618685;
-                
+
                 }
 
 
@@ -48,7 +48,3 @@ label { font-family: "Comic Sans MS", cursive, sans-serif}
 #delete_button_div { margin-bottom: 25px; }
 
 #ingred_delete {margin-bottom: 25px;}
-
-
-  
-
