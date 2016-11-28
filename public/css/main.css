@@ -1,0 +1,60 @@
+body {
+	background-color: #1E0300;
+}
+
+#login {
+	height:55%;
+	position:relative;
+	margin: auto;
+	top:150px;
+	background-color: rgba(50,50,50,0.8);
+	text-align: center;
+}
+
+#login h1 {
+	position: relative;
+	padding-top:1%;
+}
+
+#register {
+	height:55%;
+	position:relative;
+	top:150px;
+	background-color: rgba(50,50,50,0.8);
+	text-align: center;
+}
+
+#register h1 {
+	position: relative;
+	padding-top:1%;
+}
+
+#form {
+	width:80%;
+	position:relative;
+	margin:auto;
+	font-size:110%;
+}
+
+#logdiv {
+	width:100%;
+	position: relative;
+	margin: auto;
+	padding-bottom:1%;
+}
+
+.button {
+	-webkit-transition-duration:0.4s;
+	transition-duration:0.4s;										     cursor: pointer;
+	border: 3px solid #B53C00;
+	height: 50px;
+	width: 90px;
+	position: relative;
+	margin: auto;
+	background: #B53C00;
+	font-size: 110%;
+}
+
+.button:hover {
+	background-color: #B7B6B6;
+}
