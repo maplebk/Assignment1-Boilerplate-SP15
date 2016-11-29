@@ -3,6 +3,15 @@ body {
 	font-color: #cccccc;
 }
 
+#menu {
+	background-color: #B53C00;
+	font-color: #CCCCCC;
+}
+
+#login_background {
+	background-image: url(kitchen1blur.jpg);
+}
+
 #login {
 	height:55%;
 	position:relative;
