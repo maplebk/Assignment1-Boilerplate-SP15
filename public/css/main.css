@@ -4,7 +4,7 @@ body {
 
 #menu {
 	background-color: #B53C00;
-	color: #CCCCCC;
+	color: #CCCCCC !important;
 	right:2%;
 }
 
