@@ -1,6 +1,5 @@
 body {
 	background-color: #1E0300;
-	color: #cccccc;
 }
 
 #menu {
@@ -70,5 +69,6 @@ body {
 }
 
 .button:hover {
+	color: #1E0300;
 	background-color: #B7B6B6;
 }
