@@ -70,5 +70,6 @@ body {
 
 .button:hover {
 	color: #1E0300;
+	font-style: bold;
 	background-color: #B7B6B6;
 }
