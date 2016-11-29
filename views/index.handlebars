@@ -56,16 +56,16 @@
       </button>
       <span align="right">
       {{#if name}}
-        <a class="button" href="../account/{{name}}" >Hi, {{name}}</a>
-        <a class="button" href="../logout">Logout</a>
+        <a class="button2" href="../account/{{name}}" >Hi, {{name}}</a>
+        <a class="button2" href="../logout">Logout</a>
       {{else}}
-        <a class="button" href="../login/attempt">Login</a>
-        <a class="button" href="../register">Register</a>
+        <a class="button2" href="../login/attempt">Login</a>
+        <a class="button2" href="../register">Register</a>
       {{/if}}
     </span>
     </header>
     <h1>Homepage</h1>
-      <a class="button" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
+      <a class="button2" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
 
     {{#each recipes}}
     <a href="../viewrecipe/{{@index}}" class="recipeitem" recipename="{{this.name}}" recipeingredientnum="{{this.ingredientnum}}" recipepreptime="{{this.preptime}}" recipecooktime="{{this.cooktime}}" recipecourse="{{this.course}}" recipediet="{{#each this.diet}}{{this}} {{/each}}">
