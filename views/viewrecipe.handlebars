@@ -8,14 +8,20 @@
 <div>
   <h2>Ingredients</h2>
     {{#each recipe.ingredients}}
-    <h3>{{math @index "+" 1}}. <small>{{this}}</small></h3>{{/each}}
+    <h3>{{inc @index}}. <small>{{this}}</small></h3>{{/each}}
 </div>
 <div>
   <h2>Directions</h2>
     {{#each recipe.directions}}
-    <h3>{{math @index "+" 1}}. <small>{{this}}</small></h3>{{/each}}
+    <h3>{{inc @index}}. <small>{{this}}</small></h3>{{/each}}
 </div>
 
 </div>
 
 <a class="btn btn-primary btn-lg btn-block" href="/">Back</a>
+<script>
+Handlebars.registerHelper("inc", function(value, options)
+{
+    return parseInt(value) + 1;
+});
+</script>
