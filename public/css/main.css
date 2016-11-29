@@ -9,7 +9,7 @@ body {
 }
 
 #contents {
-	left:2%;
+	padding-left:2%;
 }
 
 #searchbar, #simplicity, #prep, #cook, #restrictions, #course {
