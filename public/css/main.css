@@ -6,6 +6,7 @@ body {
 #menu {
 	background-color: #B53C00;
 	font-color: #CCCCCC;
+	right:2%;
 }
 
 #login {
@@ -13,6 +14,7 @@ body {
 	position:relative;
 	margin: auto;
 	top:150px;
+	border-radius: 20%;
 	background-color: rgba(181,60,0,0.8);
 	font-color: #CCCCCC;
 	text-align: center;
@@ -27,6 +29,7 @@ body {
 	height:55%;
 	position:relative;
 	top:150px;
+	border-radius: 20%;
 	background-color: #B53C00;
 	text-align: center;
 }
