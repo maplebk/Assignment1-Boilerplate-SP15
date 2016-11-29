@@ -56,11 +56,11 @@
       </button>
       <span align="right">
       {{#if name}}
-        <a class="button2" href="../account/{{name}}" >Hi, {{name}}</a>
-        <a class="button2" href="../logout">Logout</a>
+        <a class="btn button2" href="../account/{{name}}" >Hi, {{name}}</a>
+        <a class="btn button2" href="../logout">Logout</a>
       {{else}}
-        <a class="button2" href="../login/attempt">Login</a>
-        <a class="button2" href="../register">Register</a>
+        <a class="btn button2" href="../login/attempt">Login</a>
+        <a class="btn button2" href="../register">Register</a>
       {{/if}}
     </span>
     </header>
@@ -68,7 +68,7 @@
       <div style="position:relative; margin-left:25%; align:center; margin-bottom:25px;">
         <h1>Simplicity</h1>
         <br>
-        <a class="btn button2" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
+        <a class="btn btn-block button2" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
       </div>
 
     {{#each recipes}}
