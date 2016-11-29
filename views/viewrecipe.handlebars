@@ -3,6 +3,7 @@
   <h1>
     <img class="media-object" src="{{recipe.pic}}" alt="Food" height="120" width="120">
     {{recipe.name}}
+  <br>
   <small>{{recipe.ingredientnum}} ingredients | {{recipe.preptime}} min. prep | {{recipe.cooktime}} min cook | {{#each recipe.diet}}{{this}} |{{/each}} {{recipe.course}}</small></h1>
 </div>
 <div>
@@ -18,4 +19,4 @@
 
 </div>
 
-<a class="btn btn-primary btn-lg btn-block" href="/">Back</a>
+<a class="button" href="/">Back</a>
