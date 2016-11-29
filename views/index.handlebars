@@ -56,17 +56,17 @@
       </button>
       <span align="right">
       {{#if name}}
-        <a class="btn btn-primary btn-lg" href="../account/{{name}}" >Hi, {{name}}</a>
-        <a class="btn btn-primary btn-lg" href="../logout">Logout</a>
+        <a class="button" href="../account/{{name}}" >Hi, {{name}}</a>
+        <a class="button" href="../logout">Logout</a>
       {{else}}
-        <a class="btn btn-primary btn-lg" href="../login/attempt">Login</a>
-        <a class="btn btn-primary btn-lg" href="../register">Register</a>
+        <a class="button" href="../login/attempt">Login</a>
+        <a class="button" href="../register">Register</a>
       {{/if}}
     </span>
     </header>
     <h1>Homepage</h1>
     {{#if newchange}}
-      <a class="btn btn-outline-primary btn-lg btn-block active change_recipe" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
+      <a class="button" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
     {{else}}
       <a class="btn btn-primary btn-lg btn-block" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
     {{/if}}
