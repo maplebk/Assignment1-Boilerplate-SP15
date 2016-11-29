@@ -42,7 +42,7 @@ exports.viewrecipe = function(req, res){
 	res.render('viewrecipe', {
 	helpers:
 	{
-		inc: function (value){return parseInt(value) + 1;});
+		inc: function (value){return parseInt(value) + 1;}
 	},
 	'recipe': data.recipes[parseInt(req.params.recipe)]
   });
