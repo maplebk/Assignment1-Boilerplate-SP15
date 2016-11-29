@@ -1,17 +1,11 @@
 body {
 	background-color: #1E0300;
-	background-size: cover;
 	font-color: #cccccc;
 }
 
 #menu {
 	background-color: #B53C00;
 	font-color: #CCCCCC;
-}
-
-#login_background {
-	background: url(../images/kitchen1blur.jpg);
-	background-size: 1000px;
 }
 
 #login {
