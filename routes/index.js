@@ -43,7 +43,7 @@ exports.viewrecipe = function(req, res){
 	helpers:
 	{
 		inc: function (value){return parseInt(value) + 1;});
-	}
+	},
 	'recipe': data.recipes[parseInt(req.params.recipe)]
   });
 };
