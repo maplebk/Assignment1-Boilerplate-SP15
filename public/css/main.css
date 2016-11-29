@@ -78,18 +78,18 @@ body {
 	-webkit-transition-duration:0.4s;
 	transition-duration:0.4s;										     
 	cursor: pointer;
-	border: 3px solid #B7B6B6;
+	border: 3px solid #B53C00;
 	height: 50px;
 	width: 90px;
 	position: relative;
 	margin: auto;
-	background: #B7B6B6;
+	background: #B53C00;
 	font-size: 110%;
 	color: #CCCCCC;
 }
 
 .button2:hover {
-	color: #B7B6B6;
+	color: #1E0300;
 	font-style: bold;
-	background-color: #1E0300;
+	background-color: #B7B6B6;
 }
