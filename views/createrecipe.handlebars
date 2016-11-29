@@ -1,7 +1,7 @@
 <form>
 <div class="container">
 <div class ="container-fluid">
-	<h1 class="text-center" id="createrecipetitle"> Your Recipe Details </h1>
+	<h1 class="text-center" id="createrecipetitle" style="font:arial;"> Your Recipe Details </h1>
 	<form class="form-horizontal">
 		<!name of food>
 		<div class="form-group space">
@@ -16,18 +16,18 @@
 	<form class="horizontal" id="yum">
 		<! number of ingredients>
 		<div class="form-group space">
-			<label for="numberofingredients" class="col-sm-2 control-label">Number of Ingredients</label>
+			<label for="numberofingredients" class="col-sm-2 control-label" style="font:arial;">Number of Ingredients</label>
 			
-				<label class="radio-inline" >
+				<label class="radio-inline" style="font:arial;">
 					<input class="form-control" type="checkbox" id="1-4" value="option1" name="my_ingredients"> 1 - 4
 				</label>
-				<label class="radio-inline" >
+				<label class="radio-inline" style="font:arial;">
 					<input class="form-control" type="checkbox" id="5-8" value="option2" name="my_ingredients"> 5 - 8
 				</label>
-				<label class="radio-inline" >
+				<label class="radio-inline" style="font:arial;">
 					<input class="form-control" type="checkbox" id="9-12" value="option3" name="my_ingredients"> 9 - 12
 				</label>
-				<label class="radio-inline" >
+				<label class="radio-inline" style="font:arial;">
 					<input class="form-control" type="checkbox" id="12+" value="option4" name="my_ingredients"> 12+
 				</label>
 
@@ -40,7 +40,7 @@
 <div class="container">
 	<form class="horizontal" id="prep">
 			<!prep time>
-			<div class="form-group morespace">
+			<div class="form-group morespace" style="font:arial;">
 				<label for="preptime" class="col-sm-2 control-label">Preparation Time</label>
 				<div class="col-xs-2">
 					<input type="number" class="form-control" id="preptime" placeholder="Min">
@@ -50,7 +50,7 @@
 
 	<form class="horizontal">
 			<!cooktime>
-			<div class="form-group space">
+			<div class="form-group space" style="font:arial;">
 				<label for="cooktime" class="col-sm-2 control-label">Cook Time</label>
 				<div class="col-xs-2">
 					<input type="number" class="form-control" id="cooktime" placeholder="Min">
@@ -62,7 +62,7 @@
 <div class="container">
 	<form class="horizontal" id="restrict">
 			<!diet restrcitions>
-			<div class="form-group space">
+			<div class="form-group space" style="font:arial;">
 				<label for="dietrestrictions" class="col-sm-2 control-label">Diet Restrictions</label>
 				<div class="col-sm-10">
 					<label class="checkbox-inline">
@@ -85,7 +85,7 @@
 <div class="container">
 	<form class="horizontal" id="dishes">
 			<!course type>
-			<div class="form-group space">
+			<div class="form-group space" style="font:arial;">
 				<label for="coursetype" class="col-sm-2 control-label">Course Type</label>
 				<div class="col-sm-10">
 					<label class="radio-inline">
@@ -105,7 +105,7 @@
 </div>
 			<!picture upload>
 
-			<div class="form-group container" id="picture_div">
+			<div class="form-group container" id="picture_div" style="font:arial;">
 				<label for="foodpic" class="control-label">Picture Upload</label>
 				<input type="file" id="foodpicture">
 				<p class="help-block">Feel free to upload a picture of your dish.</p>
@@ -115,7 +115,7 @@
 
     <div class="container">
 			<form class="horizontal">
-				<div class = "morespace form-group">
+				<div class = "morespace form-group" style="font:arial;">
 					<label for="ingredients" class="col-sm-2 control-label">Ingredients</label>
 					<div class="col-lg-6">
 						<div class="input-group">
@@ -138,12 +138,12 @@
 
 				<! ingredient delete button >
 			
-			<div class="container" id="ingred_delete">
+			<div class="container" id="ingred_delete" style="font:arial;">
 				<button class="btn btn-default btn-xs" type="button" id="delete_ingred">Delete Ingredient</button>
 		    </div>	
 
 				<!directions>
-			<form class="horizontal">
+			<form class="horizontal" style="font:arial;">
 				<div class = "morespace form-group">
 					<label for="directions" class="col-sm-2 control-label">Directions</label>
 					<div class="col-lg-6">
@@ -165,11 +165,11 @@
 
 			    <! directions delete button >
 
-			<div class="container" id="delete_button_div">
+			<div class="container" id="delete_button_div" style="font:arial;">
 				<button class="btn btn-default btn-xs" type="button" id="delete_step">   Delete Step   </button>
 		    </div>	
 				
-				<div class="container">
+				<div class="container" style="font:arial;">
 				<!Submit button>
 					<a href="/" type="button" class="btn btn-primary btn-lg btn-block" id="submit_button">Submit Recipe</a>
 					<a href="/" type="button" class="btn btn-primary btn-lg btn-block">Cancel</a>
