@@ -14,13 +14,13 @@ body {
 	position:relative;
 	margin: auto;
 	top:150px;
-	border-radius: 20%;
+	border-radius: 5%;
 	background-color: rgba(181,60,0,0.8);
-	font-color: #CCCCCC;
 	text-align: center;
 }
 
 #login h1 {
+	font-color: #CCCCCC;
 	position: relative;
 	padding-top:1%;
 }
@@ -29,12 +29,13 @@ body {
 	height:55%;
 	position:relative;
 	top:150px;
-	border-radius: 20%;
+	border-radius: 5%;
 	background-color: #B53C00;
 	text-align: center;
 }
 
 #register h1 {
+	font-color: #CCCCCC;
 	position: relative;
 	padding-top:1%;
 }
@@ -55,14 +56,16 @@ body {
 
 .button {
 	-webkit-transition-duration:0.4s;
-	transition-duration:0.4s;										     cursor: pointer;
-	border: 3px solid #B53C00;
+	transition-duration:0.4s;										     
+	cursor: pointer;
+	border: 3px solid #1E0300;
 	height: 50px;
 	width: 90px;
 	position: relative;
 	margin: auto;
-	background: #B53C00;
+	background: #1E0300;
 	font-size: 110%;
+	font-color: #CCCCCC;
 }
 
 .button:hover {
