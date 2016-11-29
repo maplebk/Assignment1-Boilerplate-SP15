@@ -65,7 +65,9 @@
     </span>
     </header>
     <h1>Homepage</h1>
-      <a class="button2" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
+      <div style="align:center;">
+        <a class="button2" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
+      </div>
 
     {{#each recipes}}
     <a href="../viewrecipe/{{@index}}" class="recipeitem" recipename="{{this.name}}" recipeingredientnum="{{this.ingredientnum}}" recipepreptime="{{this.preptime}}" recipecooktime="{{this.cooktime}}" recipecourse="{{this.course}}" recipediet="{{#each this.diet}}{{this}} {{/each}}">
