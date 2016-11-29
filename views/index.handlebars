@@ -65,11 +65,7 @@
     </span>
     </header>
     <h1>Homepage</h1>
-    {{#if newchange}}
       <a class="button" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
-    {{else}}
-      <a class="btn btn-primary btn-lg btn-block" onclick="clickbutton()" href="../createrecipe">Post Your Recipe</a>
-    {{/if}}
 
     {{#each recipes}}
     <a href="../viewrecipe/{{@index}}" class="recipeitem" recipename="{{this.name}}" recipeingredientnum="{{this.ingredientnum}}" recipepreptime="{{this.preptime}}" recipecooktime="{{this.cooktime}}" recipecourse="{{this.course}}" recipediet="{{#each this.diet}}{{this}} {{/each}}">
