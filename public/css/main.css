@@ -8,6 +8,10 @@ body {
 	right:2%;
 }
 
+#searchbar, #simplicity, #prep, #cook, #restrictions, #course {
+	width:50%;
+}
+
 #login {
 	height: 55%;
 	position: relative;
