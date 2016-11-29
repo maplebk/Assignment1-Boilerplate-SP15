@@ -1,5 +1,5 @@
 <script>
-Handlebars.registerHelper("inc", function(value, options)
+handlebars.registerHelper("inc", function(value, options)
 {
     return parseInt(value) + 1;
 });
@@ -14,12 +14,12 @@ Handlebars.registerHelper("inc", function(value, options)
 <div>
   <h2>Ingredients</h2>
     {{#each recipe.ingredients}}
-    <h3>{{@index_1}}. <small>{{this}}</small></h3>{{/each}}
+    <h3>{{inc @index}}. <small>{{this}}</small></h3>{{/each}}
 </div>
 <div>
   <h2>Directions</h2>
     {{#each recipe.directions}}
-    <h3>{{@index_1}}. <small>{{this}}</small></h3>{{/each}}
+    <h3>{{inc @index}}. <small>{{this}}</small></h3>{{/each}}
 </div>
 
 </div>
