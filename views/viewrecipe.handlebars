@@ -8,12 +8,12 @@
 <div>
   <h2>Ingredients</h2>
     {{#each recipe.ingredients}}
-    <h3>{{@index}}. <small>{{this}}</small></h3>{{/each}}
+    <h3>{{math @index "+" 1}}. <small>{{this}}</small></h3>{{/each}}
 </div>
 <div>
   <h2>Directions</h2>
     {{#each recipe.directions}}
-    <h3>{{@index}}. <small>{{this}}</small></h3>{{/each}}
+    <h3>{{math @index "+" 1}}. <small>{{this}}</small></h3>{{/each}}
 </div>
 
 </div>
