@@ -6,7 +6,10 @@ body {
 	background-color: #B53C00;
 	color: #CCCCCC;
 	right:2%;
-	left:5%;
+}
+
+#contents {
+	left:2%;
 }
 
 #searchbar, #simplicity, #prep, #cook, #restrictions, #course {
