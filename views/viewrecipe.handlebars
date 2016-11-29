@@ -1,3 +1,9 @@
+<script>
+Handlebars.registerHelper("inc", function(value, options)
+{
+    return parseInt(value) + 1;
+});
+</script>
 <div class="container">
 <div>
   <h1>
@@ -19,9 +25,3 @@
 </div>
 
 <a class="btn btn-primary btn-lg btn-block" href="/">Back</a>
-<script>
-Handlebars.registerHelper("inc", function(value, options)
-{
-    return parseInt(value) + 1;
-});
-</script>
